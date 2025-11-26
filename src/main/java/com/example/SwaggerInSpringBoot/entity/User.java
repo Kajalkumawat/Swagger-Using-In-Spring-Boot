@@ -1,0 +1,30 @@
+package com.example.SwaggerInSpringBoot.entity;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.List;
+
+@Data
+@NoArgsConstructor
+public class User {
+
+    private String name;
+    private String surname;
+    private int age;
+
+    public User(String name, String surname, int age) {
+        this.name = name;
+        this.surname =surname;
+        this.age =age;
+    }
+
+    public static List<User> dummyUsers(){
+        User u1 = new User("Ahmet","Ak",25);
+        User u2 = new User("Mehmet","Yeşil",26);
+        User u3 = new User("Ayşe","Mavi",24);
+        return List.of(u1,u2,u3);
+    }
+
+}
